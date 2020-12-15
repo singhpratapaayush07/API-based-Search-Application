@@ -1,0 +1,18 @@
+
+<%- include("header") -%>
+
+<div class="container">
+	<div class="jumbotron mt-5">
+		<h3>Welcome to Movies Search App</h3>
+		<p>Search for a wide range of Movies/TV Shows using any keyword matching its title</p>
+	</div>
+	<h4 class="text-center mb-3">Search for a Movie/TV Show</h4>
+	<form action="/" method="POST" autocomplete="off" style="width: 100%; max-width: 300px; margin: auto">
+		<div class="form-group">
+			<input type="text" name="search" placeholder="Enter some keyword" class="form-control">
+		</div>
+		<button class="btn btn-primary btn-block">Search</button>
+	</form>
+</div>
+
+<%- include("footer") -%>

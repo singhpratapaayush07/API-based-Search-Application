@@ -1,0 +1,27 @@
+
+<%- include("header") %>
+
+<div class="container">
+  <div class="jumbotron mt-5">
+    <h4>Here are some of the movies matching your keyword</h4>
+    <a class="btn btn-primary" href="/">Go Back</a>
+  </div>
+
+  <div class="row">
+    <% data.Search.forEach(function(movie){ %>
+
+          <div class="col-6 col-lg-3">
+            <a href="/result/ <%= movie.imdbID %> ">
+              <div class="card my-3" style="border: none">
+                <img src="<%= movie.Poster %>" class="card-img-top" alt="Image Unavailable">
+                <div class="card-title text-center mt-2" style="color: #000""> <%=movie.Title%> (<%=movie.Year%>) </div>
+              </div>
+            </a>
+
+          </div>
+
+    <% }) %>
+
+  </div>
+</div>
+<%- include("footer") %>
